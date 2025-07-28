@@ -1,0 +1,81 @@
+:root {
+  --bg-dark: #2e2e2e;
+  --bg-light: #444;
+  --text-light: #f1f1f1;
+  --highlight: #888;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  background-color: var(--bg-light);
+  padding: 20px;
+  text-align: center;
+  animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--highlight);
+  font-weight: bold;
+  position: relative;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  padding: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  background-color: var(--bg-light);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: var(--highlight);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
